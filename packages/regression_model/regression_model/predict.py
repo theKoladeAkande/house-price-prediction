@@ -7,7 +7,7 @@ from regression_model.processing.validation import validate_inputs
 from regression_model import __version__ as _version
 from regression_model.config.logging_config import get_logger
 
-_logger = get_logger(logger_name= __name__)
+_logger = get_logger(logger_name=__name__)
 
 pipeline_file_name =f'{config.PIPELINE_SAVE_FILE}{_version}.pkl'
 
