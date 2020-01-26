@@ -1,4 +1,5 @@
 #connfig.py
+""" contains constant needed for functional pipeline"""
 import pathlib
 import regression_model
 
@@ -43,3 +44,50 @@ FEATURES = ['OverallQual',
             'LotFrontage',
 #temporal feature to generate 'hasFireplaces' feature            
             'Fireplaces']
+
+PIPELINE_NAME = 'xgboost_model_pipeline'
+
+# the categorical feature hasFirePlace not included is a generated feature
+CATEGORICAL_FEATURES = ['ExterQual',
+                        'BsmtQual',
+                        'Neighborhood',
+                        'KitchenQual',
+                        'GarageCond',
+                        'GarageQual',
+                        'GarageFinish',
+                        'CentralAir',
+                        'FireplaceQu',
+                        'LandContour']
+
+#categorical features with na
+CATEGORICAL_FEATURES_WITH_NA = ['BsmtQual', 
+                                'GarageCond', 
+                                'GarageQual', 
+                                'GarageFinish', 
+                                'FireplaceQu']
+
+CATEGORICAL_NA_NOT_ALLOWED = [ 'CentralAir', 
+                               'ExterQual', 
+                               'KitchenQual', 
+                               'LandContour',
+                               'Neighborhood' ]
+
+# Numerical features with na
+NUMERICAL_FEATURES_WITH_NA = ['LotFrontage']
+
+NUMERICAL_NA_NOT_ALLOWED = ['1stFlrSF',
+                            '2ndFlrSF',
+                            'BsmtFinSF1',
+                            'FullBath',
+                            'GarageCars',
+                            'GrLivArea',
+                            'KitchenAbvGr',
+                            'OverallQual',
+                            'PoolArea',
+                            'TotRmsAbvGrd',
+                            'TotalBsmtSF']
+
+FEATURES_FOR_FEATURE_GENERATION = ['Fireplaces']
+
+#Features to drop
+DROP_FEATURES = ['Fireplaces']
