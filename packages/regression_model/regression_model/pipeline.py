@@ -5,7 +5,7 @@ from sklearn.pipeline import Pipeline
 from xgboost import XGBRegressor
 from regression_model.config import config
 from regression_model.processing import preprocessors as pps
-
+from regression_model.processing import features
 
 
 #load xgboost persisted parameters with numpy
@@ -25,7 +25,7 @@ house_price_pipeline = Pipeline(
         ('cateogrical_encoder',
         pps.CategoricalMonotonicEncoder(variables=config.CATEGORICAL_FEATURES)),
         ('binary_feature_generator',
-        pps.BinaryFeatureGenerator(variables=config.FEATURES_FOR_FEATURE_GENERATION)),
+        features.BinaryFeatureGenerator(variables=config.FEATURES_FOR_FEATURE_GENERATION)),
         ('drop_features',
         pps.DropFeatures(drop_features=config.DROP_FEATURES)),
         ('xgboost_regression_model',
