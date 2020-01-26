@@ -5,7 +5,7 @@
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 import numpy as np
-
+from regression_model.processing.errors import InvalidModelInput
 
 class CategoricalNaNImputer(BaseEstimator, TransformerMixin):
     """ Creates another category in categorical features by filling
@@ -131,7 +131,7 @@ class CategoricalMonotonicEncoder(BaseEstimator, TransformerMixin):
         if X[self.variables].isnull().any().any():
             counts_null = X[self.variables].isnull().any()
             vars_na = {key: vars for key, vars in counts_null.items() if vars is True}
-            raise ValueError(
+            raise InvalidModelInput(
                             f'Error in encoding features NaN Values introduced for'
                             f'features {vars_na.keys()}')
         return X

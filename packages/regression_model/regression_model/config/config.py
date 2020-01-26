@@ -11,9 +11,9 @@ DATASET_DIR = PACKAGE_ROOT / 'datasets'
 TRAINED_MODELS_DIR = PACKAGE_ROOT / 'trained_models'
 
 XGBOOST_PARAMS_DIR = PACKAGE_ROOT / 'xgboost_params'
-
 XGBOOST_PARAMS_FILE = XGBOOST_PARAMS_DIR  / 'xgb_regression_params.npy'
 
+LOG_DIR = PACKAGE_ROOT / 'logs'
 
 TRAIN_DATA_FILE = 'train.csv'
 TEST_DATA_FILE = 'test.csv'
@@ -46,6 +46,8 @@ FEATURES = ['OverallQual',
             'Fireplaces']
 
 PIPELINE_NAME = 'xgboost_model_pipeline'
+
+PIPELINE_SAVE_FILE = 'xgboost_regression_output_v'
 
 # the categorical feature hasFirePlace not included is a generated feature
 CATEGORICAL_FEATURES = ['ExterQual',
