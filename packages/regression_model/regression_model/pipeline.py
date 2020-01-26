@@ -1,22 +1,15 @@
 #pipeline.py
 """Module to construct pipline """
-import pathlib
 import numpy as np
 from sklearn.pipeline import Pipeline
 from xgboost import XGBRegressor
-import preprocessors as pps
+from regression_model.config import config
+from regression_model import preprocessors as pps
 
 
-
-
-PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent
-
-XGBOOST_PARAMS_DIR = PACKAGE_ROOT / 'xgboost_params'
-
-XGBOOST_PARAMS_FILE = XGBOOST_PARAMS_DIR  / 'xgb_regression_params.npy'
 
 #load xgboost persisted parameters with numpy
-xgboost_params = np.load(XGBOOST_PARAMS_FILE, allow_pickle=True)
+xgboost_params = np.load(config.XGBOOST_PARAMS_FILE, allow_pickle=True)
 #load convert from array to dictionary
 xgboost_params_dict = xgboost_params.tolist()
 
