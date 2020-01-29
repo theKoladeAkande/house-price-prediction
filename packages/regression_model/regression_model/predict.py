@@ -18,7 +18,8 @@ def model_predict(*, input_data):
     raw_test_data = pd.read_json(input_data)
     test_data = validate_inputs(raw_test_data)
     output = loaded_pipeline.predict(test_data[config.FEATURES])
-    results = {'predictions': output}
+    output = output.astype(float)
+    results = {'predictions': output, 'version': _version}
 
     _logger.info(f'making prediction with model version {_version}'
              f'inputs used for prediction: {test_data}'

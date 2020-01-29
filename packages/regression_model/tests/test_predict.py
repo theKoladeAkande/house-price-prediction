@@ -10,7 +10,7 @@ def test_make_single_prediction():
     subject = model_predict(input_data=single_data)
 
     assert subject is not None
-    assert isinstance(subject.get('predictions')[0], np.float32)
+    assert isinstance(subject.get('predictions')[0], float)
     assert ceil(subject.get('predictions')[0]) == 124265
 
 
