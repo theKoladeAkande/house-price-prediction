@@ -1,56 +1,80 @@
 version: 2
+
+defaults: &defaults
+  docker:
+    - image: circleci/python:3.7.2
+  working_directory: ~/project
+
+prepare_venv: &prepare_venv
+  run:
+    name: Create venv
+    command: |
+      python3 -m venv venv
+      source venv/bin/activate
+      pip install --upgrade pip
+
+
+
 jobs:
   test_regression_model:
-    working_directory: ~/project
-    docker:
-      - image: circleci/python:3.7.3
+    <<: *defaults
     steps:
       - checkout
+      - *prepare_venv
       - run:
-          name: Running tests
+          name: Intsall requirements
           command: |
-            virtualenv venv
             . venv/bin/activate
-            pip install --upgrade pip
             pip install -r packages/regression_model/requirements.txt
             py.test -vv packages/regression_model/tests
+      - run :
+          name: Train model
+            command: |
+              . venv/bin/activate
+              PYTHONPATH=./packages/regression_model python3 packages/regression_model/regression_model/train_pipeline.py
+      - run:
+          name: Run Test
+            command: |
+              . venv/bin/activate
+              py.test -vv packages/regression_model/tests
   
   
   test_ml_api:
-    working_directory: ~/project
-    docker:
-      - image: circleci/python:3.7.3
+    <<: *defaults
     steps:
       - checkout
+      - *prepare_venv
       - run:
           name: Testing api
           command: |
-            virtualenv venv
             . venv/bin/activate
-            pip install --upgrade pip
             pip install -r packages/ml_api/requirements.txt
             py.test -vv packages/regression_model/tests
   
   train_and_publish_regression_model:
-    working_directory: ~/project
-    docker:
-      - image: circleci/python:3.7.3
+    <<: *defaults
     steps:
         - checkout
+        - *prepare_venv
         - run:
-            name: Setup
-            command: |
-                virtualenv venv  
+            name: install requirements
+            command: |  
                 . venv/bin/activate
-                pip install --upgrade pip
                 pip install -r packages/regression_model/requirements.txt
         - run:
-            name: Train and publish 
+            name: Train model 
             command: |
                 . venv/bin/activate
-                chmod +x ./scripts/publish_model.sh
                 PYTHONPATH=./packages/regression_model python3 ./packages/regression_model/regression_model/train_pipeline.py
-                ./scripts/publish_model.sh ./packages/regression_model
+        - run:
+            name: publish model
+            command: |
+              . venv/bin/activate
+              chmod +x ./scripts/publish_model.sh
+              ./scripts/publish_model.sh ./packages/regression_model
+
+
+
 
 
 
@@ -60,7 +84,8 @@ workflows:
     jobs:
       - test_regression_model
       - test_ml_api
-      - train_and_publish_regression_model
-      - test_ml_api:
+      - train_and_publish_regression_model:
           requires:
-           - train_and_publish_regression_model
+            - test_regression_model
+            - test_ml_api
+            
