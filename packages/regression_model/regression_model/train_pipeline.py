@@ -2,7 +2,7 @@
 
 from sklearn.model_selection import train_test_split
 
-import pipeline
+from regression_model import pipeline
 from regression_model.processing.data_managment import load_dataset, save_pipeline
 from regression_model.config import config
 

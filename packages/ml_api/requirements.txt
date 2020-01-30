@@ -1,3 +1,5 @@
 # api 
-
 flask==1.1.1 
+
+#schema 
+marshmallow==3.3.0

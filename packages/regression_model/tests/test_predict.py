@@ -5,7 +5,7 @@ from regression_model.predict import model_predict
 
 def test_make_single_prediction():
     test_data = load_dataset(filename='test.csv')
-    single_data = test_data[0:1].to_json(orient='records')
+    single_data = test_data[0:1]
 
     subject = model_predict(input_data=single_data)
 
@@ -16,9 +16,8 @@ def test_make_single_prediction():
 
 
 def test_make_multiple_predictions():
-    test_data = load_dataset(filename='test.csv')
-    test_data_length = len(test_data)
-    multiple_test_data = test_data.to_json(orient='records')
+    multiple_test_data = load_dataset(filename='test.csv')
+    test_data_length = len(multiple_test_data)
 
     subject = model_predict(input_data=multiple_test_data)
 
