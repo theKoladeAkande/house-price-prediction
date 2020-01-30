@@ -35,7 +35,7 @@ jobs:
     working_directory: ~/project
     docker:
       - image: circleci/python:3.7.3
-      steps:
+    steps:
         - checkout
         - run:
             name: Setup
