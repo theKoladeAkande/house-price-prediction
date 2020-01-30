@@ -67,3 +67,212 @@
 
 [1456 rows x 80 columns]prediction results: {'predictions': array([124264.6484375, 150459.15625  , 184218.28125  , ...,
        182672.515625 , 120403.6328125, 204601.75     ]), 'version': '0.1.0'}
+2020-01-30 22:22:22,196-regression_model.predict-INFO-model_predict:25-making prediction with model version 0.1.0inputs used for prediction:      Id  MSSubClass MSZoning  ...  YrSold  SaleType SaleCondition
+0  1461          20       RH  ...    2010        WD        Normal
+
+[1 rows x 80 columns]prediction results: {'predictions': array([124264.6484375]), 'version': '0.1.0'}
+2020-01-30 22:22:22,536-regression_model.predict-INFO-model_predict:25-making prediction with model version 0.1.0inputs used for prediction:         Id  MSSubClass MSZoning  ...  YrSold  SaleType SaleCondition
+0     1461          20       RH  ...    2010        WD        Normal
+1     1462          20       RL  ...    2010        WD        Normal
+2     1463          60       RL  ...    2010        WD        Normal
+3     1464          60       RL  ...    2010        WD        Normal
+4     1465         120       RL  ...    2010        WD        Normal
+5     1466          60       RL  ...    2010        WD        Normal
+6     1467          20       RL  ...    2010        WD        Normal
+7     1468          60       RL  ...    2010        WD        Normal
+8     1469          20       RL  ...    2010        WD        Normal
+9     1470          20       RL  ...    2010        WD        Normal
+10    1471         120       RH  ...    2010        WD        Normal
+11    1472         160       RM  ...    2010       COD        Normal
+12    1473         160       RM  ...    2010        WD        Normal
+13    1474         160       RL  ...    2010        WD        Normal
+14    1475         120       RL  ...    2010        WD        Normal
+15    1476          60       RL  ...    2010       New       Partial
+16    1477          20       RL  ...    2010       New       Partial
+17    1478          20       RL  ...    2010        WD        Normal
+18    1479          20       RL  ...    2010        WD        Normal
+19    1480          20       RL  ...    2010        WD        Normal
+20    1481          60       RL  ...    2010        WD        Normal
+21    1482         120       RL  ...    2010        WD        Normal
+22    1483          20       RL  ...    2010        WD        Normal
+23    1484         120       RL  ...    2010        WD        Normal
+24    1485          80       RL  ...    2010        WD        Normal
+25    1486          60       RL  ...    2010        WD        Normal
+26    1487          60       RL  ...    2010        WD        Normal
+27    1488          20       RL  ...    2010        WD        Normal
+28    1489          20       FV  ...    2010       New       Partial
+29    1490          20       FV  ...    2010        WD        Normal
+...    ...         ...      ...  ...     ...       ...           ...
+1429  2890          30       RM  ...    2006        WD        Normal
+1430  2891          50       RM  ...    2006        WD        Normal
+1431  2892          30  C (all)  ...    2006        WD       Abnorml
+1432  2893         190  C (all)  ...    2006        WD       Abnorml
+1433  2894          50  C (all)  ...    2006        WD        Normal
+1434  2895         120       RM  ...    2006       New       Partial
+1435  2896         120       RM  ...    2006        WD        Normal
+1436  2897          20       RL  ...    2006        WD        Normal
+1437  2898          90       RL  ...    2006        WD        Normal
+1438  2899          20       RL  ...    2006        WD        Normal
+1439  2900          80       RL  ...    2006        WD        Normal
+1440  2901          20       RL  ...    2006        WD        Alloca
+1441  2902          20       RL  ...    2006        WD        Normal
+1442  2903          20       RL  ...    2006       New       Partial
+1443  2904          20       RL  ...    2006       New       Partial
+1444  2905          20      NaN  ...    2006        WD        Normal
+1445  2906          90       RM  ...    2006        WD        Normal
+1446  2907         160       RM  ...    2006        WD        Normal
+1447  2908          20       RL  ...    2006        WD        Normal
+1448  2909          90       RL  ...    2006        WD        Normal
+1449  2910         180       RM  ...    2006        WD        Normal
+1450  2911         160       RM  ...    2006        WD        Normal
+1451  2912          20       RL  ...    2006        WD        Normal
+1452  2913         160       RM  ...    2006        WD       Abnorml
+1453  2914         160       RM  ...    2006        WD        Normal
+1454  2915         160       RM  ...    2006        WD        Normal
+1455  2916         160       RM  ...    2006        WD       Abnorml
+1456  2917          20       RL  ...    2006        WD       Abnorml
+1457  2918          85       RL  ...    2006        WD        Normal
+1458  2919          60       RL  ...    2006        WD        Normal
+
+[1456 rows x 80 columns]prediction results: {'predictions': array([124264.6484375, 150459.15625  , 184218.28125  , ...,
+       182672.515625 , 120403.6328125, 204601.75     ]), 'version': '0.1.0'}
+2020-01-30 22:34:24,075-regression_model.processing.data_managment-INFO-save_pipeline:26-save_file : xgboost_regression_output_v0.1.0.pkl
+2020-01-30 22:34:33,271-regression_model.predict-INFO-model_predict:25-making prediction with model version 0.1.0inputs used for prediction:      Id  MSSubClass MSZoning  ...  YrSold  SaleType SaleCondition
+0  1461          20       RH  ...    2010        WD        Normal
+
+[1 rows x 80 columns]prediction results: {'predictions': array([124264.6484375]), 'version': '0.1.0'}
+2020-01-30 22:34:33,613-regression_model.predict-INFO-model_predict:25-making prediction with model version 0.1.0inputs used for prediction:         Id  MSSubClass MSZoning  ...  YrSold  SaleType SaleCondition
+0     1461          20       RH  ...    2010        WD        Normal
+1     1462          20       RL  ...    2010        WD        Normal
+2     1463          60       RL  ...    2010        WD        Normal
+3     1464          60       RL  ...    2010        WD        Normal
+4     1465         120       RL  ...    2010        WD        Normal
+5     1466          60       RL  ...    2010        WD        Normal
+6     1467          20       RL  ...    2010        WD        Normal
+7     1468          60       RL  ...    2010        WD        Normal
+8     1469          20       RL  ...    2010        WD        Normal
+9     1470          20       RL  ...    2010        WD        Normal
+10    1471         120       RH  ...    2010        WD        Normal
+11    1472         160       RM  ...    2010       COD        Normal
+12    1473         160       RM  ...    2010        WD        Normal
+13    1474         160       RL  ...    2010        WD        Normal
+14    1475         120       RL  ...    2010        WD        Normal
+15    1476          60       RL  ...    2010       New       Partial
+16    1477          20       RL  ...    2010       New       Partial
+17    1478          20       RL  ...    2010        WD        Normal
+18    1479          20       RL  ...    2010        WD        Normal
+19    1480          20       RL  ...    2010        WD        Normal
+20    1481          60       RL  ...    2010        WD        Normal
+21    1482         120       RL  ...    2010        WD        Normal
+22    1483          20       RL  ...    2010        WD        Normal
+23    1484         120       RL  ...    2010        WD        Normal
+24    1485          80       RL  ...    2010        WD        Normal
+25    1486          60       RL  ...    2010        WD        Normal
+26    1487          60       RL  ...    2010        WD        Normal
+27    1488          20       RL  ...    2010        WD        Normal
+28    1489          20       FV  ...    2010       New       Partial
+29    1490          20       FV  ...    2010        WD        Normal
+...    ...         ...      ...  ...     ...       ...           ...
+1429  2890          30       RM  ...    2006        WD        Normal
+1430  2891          50       RM  ...    2006        WD        Normal
+1431  2892          30  C (all)  ...    2006        WD       Abnorml
+1432  2893         190  C (all)  ...    2006        WD       Abnorml
+1433  2894          50  C (all)  ...    2006        WD        Normal
+1434  2895         120       RM  ...    2006       New       Partial
+1435  2896         120       RM  ...    2006        WD        Normal
+1436  2897          20       RL  ...    2006        WD        Normal
+1437  2898          90       RL  ...    2006        WD        Normal
+1438  2899          20       RL  ...    2006        WD        Normal
+1439  2900          80       RL  ...    2006        WD        Normal
+1440  2901          20       RL  ...    2006        WD        Alloca
+1441  2902          20       RL  ...    2006        WD        Normal
+1442  2903          20       RL  ...    2006       New       Partial
+1443  2904          20       RL  ...    2006       New       Partial
+1444  2905          20      NaN  ...    2006        WD        Normal
+1445  2906          90       RM  ...    2006        WD        Normal
+1446  2907         160       RM  ...    2006        WD        Normal
+1447  2908          20       RL  ...    2006        WD        Normal
+1448  2909          90       RL  ...    2006        WD        Normal
+1449  2910         180       RM  ...    2006        WD        Normal
+1450  2911         160       RM  ...    2006        WD        Normal
+1451  2912          20       RL  ...    2006        WD        Normal
+1452  2913         160       RM  ...    2006        WD       Abnorml
+1453  2914         160       RM  ...    2006        WD        Normal
+1454  2915         160       RM  ...    2006        WD        Normal
+1455  2916         160       RM  ...    2006        WD       Abnorml
+1456  2917          20       RL  ...    2006        WD       Abnorml
+1457  2918          85       RL  ...    2006        WD        Normal
+1458  2919          60       RL  ...    2006        WD        Normal
+
+[1456 rows x 80 columns]prediction results: {'predictions': array([124264.6484375, 150459.15625  , 184218.28125  , ...,
+       182672.515625 , 120403.6328125, 204601.75     ]), 'version': '0.1.0'}
+2020-01-30 22:54:49,184-regression_model.processing.data_managment-INFO-save_pipeline:26-save_file : xgboost_regression_output_v0.1.0.pkl
+2020-01-30 22:55:06,460-regression_model.predict-INFO-model_predict:25-making prediction with model version 0.1.0inputs used for prediction:      Id  MSSubClass MSZoning  ...  YrSold  SaleType SaleCondition
+0  1461          20       RH  ...    2010        WD        Normal
+
+[1 rows x 80 columns]prediction results: {'predictions': array([124264.6484375]), 'version': '0.1.0'}
+2020-01-30 22:55:06,794-regression_model.predict-INFO-model_predict:25-making prediction with model version 0.1.0inputs used for prediction:         Id  MSSubClass MSZoning  ...  YrSold  SaleType SaleCondition
+0     1461          20       RH  ...    2010        WD        Normal
+1     1462          20       RL  ...    2010        WD        Normal
+2     1463          60       RL  ...    2010        WD        Normal
+3     1464          60       RL  ...    2010        WD        Normal
+4     1465         120       RL  ...    2010        WD        Normal
+5     1466          60       RL  ...    2010        WD        Normal
+6     1467          20       RL  ...    2010        WD        Normal
+7     1468          60       RL  ...    2010        WD        Normal
+8     1469          20       RL  ...    2010        WD        Normal
+9     1470          20       RL  ...    2010        WD        Normal
+10    1471         120       RH  ...    2010        WD        Normal
+11    1472         160       RM  ...    2010       COD        Normal
+12    1473         160       RM  ...    2010        WD        Normal
+13    1474         160       RL  ...    2010        WD        Normal
+14    1475         120       RL  ...    2010        WD        Normal
+15    1476          60       RL  ...    2010       New       Partial
+16    1477          20       RL  ...    2010       New       Partial
+17    1478          20       RL  ...    2010        WD        Normal
+18    1479          20       RL  ...    2010        WD        Normal
+19    1480          20       RL  ...    2010        WD        Normal
+20    1481          60       RL  ...    2010        WD        Normal
+21    1482         120       RL  ...    2010        WD        Normal
+22    1483          20       RL  ...    2010        WD        Normal
+23    1484         120       RL  ...    2010        WD        Normal
+24    1485          80       RL  ...    2010        WD        Normal
+25    1486          60       RL  ...    2010        WD        Normal
+26    1487          60       RL  ...    2010        WD        Normal
+27    1488          20       RL  ...    2010        WD        Normal
+28    1489          20       FV  ...    2010       New       Partial
+29    1490          20       FV  ...    2010        WD        Normal
+...    ...         ...      ...  ...     ...       ...           ...
+1429  2890          30       RM  ...    2006        WD        Normal
+1430  2891          50       RM  ...    2006        WD        Normal
+1431  2892          30  C (all)  ...    2006        WD       Abnorml
+1432  2893         190  C (all)  ...    2006        WD       Abnorml
+1433  2894          50  C (all)  ...    2006        WD        Normal
+1434  2895         120       RM  ...    2006       New       Partial
+1435  2896         120       RM  ...    2006        WD        Normal
+1436  2897          20       RL  ...    2006        WD        Normal
+1437  2898          90       RL  ...    2006        WD        Normal
+1438  2899          20       RL  ...    2006        WD        Normal
+1439  2900          80       RL  ...    2006        WD        Normal
+1440  2901          20       RL  ...    2006        WD        Alloca
+1441  2902          20       RL  ...    2006        WD        Normal
+1442  2903          20       RL  ...    2006       New       Partial
+1443  2904          20       RL  ...    2006       New       Partial
+1444  2905          20      NaN  ...    2006        WD        Normal
+1445  2906          90       RM  ...    2006        WD        Normal
+1446  2907         160       RM  ...    2006        WD        Normal
+1447  2908          20       RL  ...    2006        WD        Normal
+1448  2909          90       RL  ...    2006        WD        Normal
+1449  2910         180       RM  ...    2006        WD        Normal
+1450  2911         160       RM  ...    2006        WD        Normal
+1451  2912          20       RL  ...    2006        WD        Normal
+1452  2913         160       RM  ...    2006        WD       Abnorml
+1453  2914         160       RM  ...    2006        WD        Normal
+1454  2915         160       RM  ...    2006        WD        Normal
+1455  2916         160       RM  ...    2006        WD       Abnorml
+1456  2917          20       RL  ...    2006        WD       Abnorml
+1457  2918          85       RL  ...    2006        WD        Normal
+1458  2919          60       RL  ...    2006        WD        Normal
+
+[1456 rows x 80 columns]prediction results: {'predictions': array([124264.6484375, 150459.15625  , 184218.28125  , ...,
+       182672.515625 , 120403.6328125, 204601.75     ]), 'version': '0.1.0'}
