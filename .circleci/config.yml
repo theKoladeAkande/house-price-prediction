@@ -29,12 +29,12 @@ jobs:
             py.test -vv packages/regression_model/tests
       - run :
           name: Train model
-            command: |
+          command: |
               . venv/bin/activate
               PYTHONPATH=./packages/regression_model python3 packages/regression_model/regression_model/train_pipeline.py
       - run:
           name: Run Test
-            command: |
+          command: |
               . venv/bin/activate
               py.test -vv packages/regression_model/tests
   
@@ -88,4 +88,3 @@ workflows:
           requires:
             - test_regression_model
             - test_ml_api
-            
