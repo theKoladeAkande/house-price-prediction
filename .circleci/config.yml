@@ -26,11 +26,7 @@ jobs:
           command: |
             . venv/bin/activate
             pip install -r packages/regression_model/requirements.txt
-      - run :
-          name: Train model
-          command: |
-              . venv/bin/activate
-              PYTHONPATH=./packages/regression_model python3 packages/regression_model/regression_model/train_pipeline.py
+      
       - run:
           name: Run Test
           command: |
