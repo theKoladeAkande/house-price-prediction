@@ -26,7 +26,6 @@ jobs:
           command: |
             . venv/bin/activate
             pip install -r packages/regression_model/requirements.txt
-            py.test -vv packages/regression_model/tests
       - run :
           name: Train model
           command: |
