@@ -8,3 +8,6 @@ marshmallow==2.17.0
 
 #install package from gemfury
 regression-model==0.1.0
+
+# deployment 
+gunicorn=20.0.4
