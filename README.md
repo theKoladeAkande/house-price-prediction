@@ -15,6 +15,7 @@ The pipeline involves:
 
 #### Processing
 **file path** *house-price-prediction/packages/regression_model/regression_model/processing*
+
 Custom transformer were built using subclassing sklearn's BaseEstimator, Transformermxin.
 These transformers handles preprocessing operations on the data including feature engineering, preparing the data for model building.
 Data Validations were also added to process data for errors before loading in the data, also the processing aspect includes
